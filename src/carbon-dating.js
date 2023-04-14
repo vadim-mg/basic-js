@@ -26,9 +26,6 @@ function dateSample(sampleActivity) {
 
   const lambda = Math.log(2) / HALF_LIFE_PERIOD
   const result =  Math.ceil(1 / lambda * Math.log(MODERN_ACTIVITY / n))
-
-  console.log(`samplAct: ${n}`)
-  console.log(`result: ${result}`)
   return result
 }
 
