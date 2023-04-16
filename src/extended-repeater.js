@@ -15,9 +15,25 @@ const { NotImplementedError } = require('../extensions/index.js');
  * => 'STRINGPLUS00PLUS00PLUS**STRINGPLUS00PLUS00PLUS**STRINGPLUS00PLUS00PLUS'
  *
  */
-function repeater(/* str, options */) {
-  throw new NotImplementedError('Not implemented');
-  // remove line with error and write your code here
+
+// repeatTimes sets the number of repetitions of the str;
+// separator is a string separating repetitions of the str;
+// addition is an additional string that will be added to each repetition of the str;
+// additionRepeatTimes sets the number of repetitions of the addition;
+// additionSeparator is a string separating repetitions of the addition.
+function repeater(str, options) {
+  const repeatTimes = options.repeatTimes ? options.repeatTimes * 1 : 1
+
+  const additionRepeatTimes = options.additionRepeatTimes ? options.additionRepeatTimes * 1 : 1
+  const separator = options.separator ? '' + options.separator : '+'
+  const additionSeparator = options.additionSeparator ? ''+ options.additionSeparator : '|'
+  const addition = options.addition ? '' + options.addition : ''
+  const suffix = Array(additionRepeatTimes).fill(addition).join(additionSeparator)
+  const word = '' + str + suffix
+  const result = Array(repeatTimes).fill(word).join(separator)
+  return(result)
+
+
 }
 
 module.exports = {
