@@ -24,7 +24,6 @@ function deleteDigit(n) {
   return Math.max(...resultNumbers.map(val => Number(val)))
 }
 
-console.log(deleteDigit(152))
 
 module.exports = {
   deleteDigit,
