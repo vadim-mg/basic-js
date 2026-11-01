@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Запуск всех тестов Node.js",
+      "program": "${workspaceFolder}/node_modules/.bin/node", // или просто node
+      "runtimeArgs": [
+        "--test"
+      ],
+      "args": [
+        "**/*.test.js" // Укажите паттерн ваших файлов с тестами
+      ],
+      "console": "integratedTerminal"
+    }
+  ]
+}
